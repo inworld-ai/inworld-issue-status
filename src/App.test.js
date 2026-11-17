@@ -1,9 +1,27 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import { render, screen } from '@testing-library/react';
+import App from './components/App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+// Stub the ESM-only Markdown renderer for this empty-incident test.
+jest.mock('react-markdown', () => () => null);
+
+afterEach(() => localStorage.clear());
+
+test('renders the operational status and no incidents from cached issues', () => {
+  const fetchedAt = new Date().toISOString();
+  localStorage.setItem('issueStatusLastFetchcomponent', fetchedAt);
+  localStorage.setItem('issueStatusLastFetchincident', fetchedAt);
+  localStorage.setItem(
+    'issueStatuscomponent',
+    JSON.stringify([{ id: 1, title: 'API', labels: [{ name: 'operational' }] }])
+  );
+  localStorage.setItem('issueStatusincident', '[]');
+
+  render(<App />);
+
+  expect(
+    screen.getByRole('heading', { name: 'All Systems Operational' })
+  ).toBeInTheDocument();
+  expect(screen.getByText('API')).toBeInTheDocument();
+  expect(screen.getByText('No Incidents found.')).toBeInTheDocument();
 });

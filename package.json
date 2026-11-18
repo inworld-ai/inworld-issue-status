@@ -2,51 +2,33 @@
   "name": "issue-status",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
   "dependencies": {
-    "@testing-library/jest-dom": "5.14.1",
-    "@testing-library/react": "12.1.2",
-    "@testing-library/user-event": "13.3.0",
     "chart.js": "3.5.1",
-    "moment": "2.29.4",
+    "moment": "2.31.0",
     "react": "17.0.2",
     "react-chartjs-2": "3.0.5",
     "react-dom": "17.0.2",
     "react-markdown": "7.0.1",
-    "react-scripts": "5.0.1",
     "styled-components": "5.3.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "vite",
+    "build": "vite build",
+    "test": "vitest run",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "12.1.5",
+    "@vitejs/plugin-react": "6.3.0",
     "gh-pages": "^6.3.0",
-    "prettier": "^2.4.1"
+    "jsdom": "31.0.1",
+    "prettier": "^2.4.1",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
   },
-  "overrides": {
-    "shell-quote@<1.11.0": "1.11.0"
-  },
-  "resolutions": {
-    "shell-quote": "1.11.0"
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   }
 }

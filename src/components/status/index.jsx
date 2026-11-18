@@ -47,7 +47,7 @@ export default ({ loading, error, components, refetch }) => {
     <>
       {error.hasError && (
         <Code>
-          <div>An error occured</div>
+          <div>An error occurred</div>
           <div>
             You may have exceeded the rate limit. Try again in 1 hour to fetch
             the latest data.

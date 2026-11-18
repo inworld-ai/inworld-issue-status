@@ -24,7 +24,7 @@ You can view the Issue Status demo [here](https://tadhglewis.github.io/issue-sta
 
 ## Setup
 
-- Use Node.js 22.22.2 or later on Node 22, or Node.js 24.15 or later. Run `npm ci` to install the locked dependencies.
+- Use Node.js 22.22.2+ on Node 22, Node.js 24.15+ on Node 24, or Node.js 26 or later. Run `npm ci` to install the locked dependencies.
 
 - Clone / Fork this repository to your GitHub account (forking only required for GitHub Pages)
 - Run `git checkout tags/VERSION` to checkout to the [latest version](#configuration). It is not recommended to setup using the master branch

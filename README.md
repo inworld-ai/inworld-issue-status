@@ -24,6 +24,8 @@ You can view the Issue Status demo [here](https://tadhglewis.github.io/issue-sta
 
 ## Setup
 
+- Use Node.js 22.22.2 or later on Node 22, or Node.js 24.15 or later. Run `npm ci` to install the locked dependencies.
+
 - Clone / Fork this repository to your GitHub account (forking only required for GitHub Pages)
 - Run `git checkout tags/VERSION` to checkout to the [latest version](#configuration). It is not recommended to setup using the master branch
 - Edit the `.env` file found in the root directory and enter your [configuration options](#configuration)
@@ -36,7 +38,7 @@ You can view the Issue Status demo [here](https://tadhglewis.github.io/issue-sta
 ### Other hosting providers
 
 - Run `npm run build` this will create a build directory containing the built app
-- For deploying [click here](https://create-react-app.dev/docs/deployment)
+- Serve the contents of `build/` with your static host.
 
 You may also want to [configure issue templates for your repository](https://help.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository) which will act as Component and Incident templates. **Including the `issue status` label in an issue template will allow unauthorised GitHub users to update the status page, this should be added when creating the issue**
 
@@ -54,7 +56,7 @@ Updating is important to get the latest features and patches
 ### Other hosting providers
 
 - Run `npm run build` to create a new build directory
-- For deploying [click here](https://create-react-app.dev/docs/deployment)
+- Serve the contents of `build/` with your static host.
 
 ## Advanced
 

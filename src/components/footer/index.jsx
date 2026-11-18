@@ -23,7 +23,7 @@ export default () => (
   <Footer>
     <div></div>
     <Branding
-      visible={process.env.REACT_APP_BRANDING !== "false"}
+      visible={import.meta.env.REACT_APP_BRANDING !== "false"}
       href="https://github.com/tadhglewis/issue-status"
       rel="noopener"
       target="_blank"

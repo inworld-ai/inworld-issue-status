@@ -17,15 +17,15 @@ const Header = styled.div`
 `;
 
 export default () =>
-  process.env.REACT_APP_LOGO || process.env.REACT_APP_NAME ? (
+  import.meta.env.REACT_APP_LOGO || import.meta.env.REACT_APP_NAME ? (
     <Header>
-      {process.env.REACT_APP_LOGO ? (
+      {import.meta.env.REACT_APP_LOGO ? (
         <Logo
-          src={process.env.REACT_APP_LOGO}
-          alt={process.env.REACT_APP_NAME}
+          src={import.meta.env.REACT_APP_LOGO}
+          alt={import.meta.env.REACT_APP_NAME}
         />
       ) : (
-        <Title>{process.env.REACT_APP_NAME}</Title>
+        <Title>{import.meta.env.REACT_APP_NAME}</Title>
       )}
     </Header>
   ) : null;

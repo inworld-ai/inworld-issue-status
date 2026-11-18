@@ -2,9 +2,6 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './components/App';
 
-// Stub the ESM-only Markdown renderer for this empty-incident test.
-jest.mock('react-markdown', () => () => null);
-
 afterEach(() => localStorage.clear());
 
 test('renders the operational status and no incidents from cached issues', () => {
